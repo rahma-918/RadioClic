@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
+body {
+	background: var(--grey);
+	overflow-x: hidden;
+}
+
+
+
+
+
+/* SIDEBAR */
+#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 280px;
+	height: 100%;
+	background: var(--light);
+	z-index: 2000;
+	font-family: var(--lato);
+	transition: .3s ease;
+	overflow-x: hidden;
+	scrollbar-width: none;
+}
+#sidebar::state(webkit-scrollbar) {
+	display: none;
+}
+#sidebar.hide {
+	width: 60px;
+}
+#sidebar .brand {
+	font-size: 24px;
+	font-weight: 700;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	color: var(--blue);
+	position: sticky;
+	top: 0;
+	left: 0;
+	background: var(--light);
+	z-index: 500;
+	padding-bottom: 20px;
+	box-sizing: content-box;
+}
+#sidebar .brand .bx {
+	min-width: 60px;
+	display: flex;
+	justify-content: center;
+}
+#sidebar .side-menu {
+	width: 100%;
+	margin-top: 48px;
+}
+#sidebar .side-menu li {
+	height: 48px;
+	background: transparent;
+	margin-left: 6px;
+	border-radius: 48px 0 0 48px;
+	padding: 4px;
+}
+#sidebar .side-menu li.active {
+	background: var(--grey);
+	position: relative;
+}
+#sidebar .side-menu li.active::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	top: -40px;
+	right: 0;
+	box-shadow: 20px 20px 0 var(--grey);
+	z-index: -1;
+}
+#sidebar .side-menu li.active::after {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	bottom: -40px;
+	right: 0;
+	box-shadow: 20px -20px 0 var(--grey);
+	z-index: -1;
+}
+#sidebar .side-menu li a {
+	width: 100%;
+	height: 100%;
+	background: var(--light);
+	display: flex;
+	align-items: center;
+	border-radius: 48px;
+	font-size: 16px;
+	color: var(--dark);
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+#sidebar .side-menu.top li.active a {
+	color: var(--blue);
+}
+#sidebar.hide .side-menu li a {
+	width: calc(48px - (4px * 2));
+	transition: width .3s ease;
+}
+#sidebar .side-menu li a.logout {
+	color: var(--red);
+}
+#sidebar .side-menu.top li a:hover {
+	color: var(--blue);
+}
+#sidebar .side-menu li a .bx {
+	min-width: calc(60px  - ((4px + 6px) * 2));
+	display: flex;
+	justify-content: center;
+}
+/* SIDEBAR */
+
+/* CONTENT */
+#content {
+	position: relative;
+	width: calc(100% - 280px);
+	left: 280px;
+	transition: .3s ease;
+}
+#sidebar.hide ~ #content {
+	width: calc(100% - 60px);
+	left: 60px;
+}
+
+
+
+
+/* NAVBAR */
+/* NAVBAR */
+#content nav {
+	height: 56px;
+	background: var(--light);
+	padding: 0 24px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+	font-family: var(--lato);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+#content nav::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: -20px -20px 0 var(--light);
+}
+#content nav .bx.bx-menu {
+	cursor: pointer;
+	color: var(--dark);
+	font-size: 20px;
+}
+
+#content nav .profile-name{
+	color: var(--dark);
+    font-size: 15px;
+    margin-top: 12px;
+}
+#content nav .profile-name:hover {
+	color: var(--blue);
+}
+.position{
+	margin-left: 900px;
+}
+
+#content nav .deconnecter {
+	position: relative;
+	color: var(--dark);
+	margin-left: 50px;
+}
+#content nav .deconnecter .icons {
+	font-size: 22px;
+}
+#content nav .deconnecter:hover {
+	color: var(--red);
+}
+#content nav .toggle {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	margin-bottom: -30px;
+	background-color: #4CAF50; /* Changez la couleur de fond */
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  #content nav .toggle:hover {
+	background-color: #45a049; /* Changez la couleur de fond au survol */
+  }
+  
+  #content nav .toggle .icon {
+	color: #fff; /* Changez la couleur de l'icône */
+  }
+  
+  #content nav .toggle .active {
+	background-color: #45a049; /* Changez la couleur de fond lorsque actif */
+	border-color: #999;
+  }
+  
+  /* Styles for the profile-info section */
+  #content nav .profile-infotoggle {
+	position: absolute;
+	top: 70px; /* Ajustez la position verticale selon vos besoins */
+	right: 30px; /* Ajustez la position horizontale selon vos besoins */
+	background-color: #ceeeee;
+	border: 2px solid #ccc;
+	padding: 30px; /* Réduit le padding pour mieux s'ajuster */
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #333; /* Changez la couleur du texte */
+  }
+  
+  #content nav .profile-infotoggle .icon-text {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-right: 20px;
+
+  }
+  
+  #content nav .profile-infotoggle img {
+	width: 50px; /* Ajustez la taille de l'image selon vos besoins */
+	height: 50px; /* Ajustez la taille de l'image selon vos besoins */
+	border-radius: 50%;
+	margin-bottom: 20px;
+  }
+  #content nav .profile-infotoggle  h5{
+	margin: 0;
+	margin-left: 7px;
+	font-weight: bold;
+  }
+  
+  #content nav .profile-infotoggle p {
+	margin: 0;
+	font-size: 14px;
+	margin-left: 7px;
+	font-weight: bold;
+  }
+
+/* NAVBAR */
+
+
+/* Styles spécifiques pour chaque section */
+.modificationpatient {
+	/* Display and positioning */
+	display: block;
+	position: relative;
+  
+	/* Margin and padding */
+	margin: 0 auto; /* Center the main element horizontally */
+	padding: 20px; /* Add space around the content */
+  
+	/* Background color */
+	background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  .modificationpatient .editpatient {
+	/* Display and positioning */
+	display: block;
+	margin-bottom: 20px; /* Add space between sections */
+  
+	/* Box shadow */
+	box-shadow: 0 2px 5px rgba(47, 29, 211, 0.1); /* Add a subtle shadow */
+  }
+  
+  .modificationpatient .userpatient {
+	/* Margin and padding */
+	margin-bottom: 10px;
+	padding: 10px 0;
+	margin-left: 15px;
+  
+	/* Font styles */
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: var(--blue); /* Blue heading text */
+  }
+  .modificationpatient  .formulairepatient {
+	/* Display and positioning */
+	display: block;
+	width: 600px; /* Adjust width as needed */
+	margin: 0 auto; /* Center the form horizontally */
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  .facture-container h1{
+	font-weight: bold;
+  }
+  
+  .modificationpatient .champpatient {
+	/* Display and positioning */
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #070505;
+  }
+  
+  .modificationpatient input[type="text"],
+  .modificationpatient input[type="email"],
+  .modificationpatient input[type="password"] {
+	/* Display and positioning */
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box; /* Include padding in the element's width */
+  }
+  
+  .télécharger{
+	/* Display and positioning */
+	display: block;
+	width: 15%; /* Make the button span the full width of the container */
+	padding: 10px 20px;
+	margin-top: 10px;
+	margin-left: 50px;
+	background-color: #26a444;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease; /* Add a smooth hover effect */
+  }
+  
+  .télécharger:hover {
+	background-color: #2d733c; /* Darken the background color on hover */
+  }
+
+  @media screen and (max-width: 768px) {
+	#sidebar {
+		width: 200px;
+	}
+
+	#content {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 36px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content main .box-info {
+		grid-template-columns: 1fr;
+	}
+}

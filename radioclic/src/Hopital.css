@@ -1,0 +1,74 @@
+.headers{
+    display: flex;
+    width: 100%;
+    min-height: 52vh;
+    margin-top: 90px;
+}
+.contenu {
+    padding-left: 150px;
+    padding-top: 50px;
+}
+.image{
+    padding-top: 17px;
+    padding-left: 120px;
+}
+.image img{
+    height: 280px;
+    width: auto;
+}
+.line{
+    display: flex;
+}
+.contenu h3{
+    font-size: 40px;
+    font-weight: 500;
+    color: #0d0d0e;
+    font-family: "tajawal";
+}
+.info{
+    margin-top: 25px;
+    padding-left: 40px;
+}
+.info .line h5{
+    font-size: 23px;
+    color: #3679DD;
+    font-family: "tajawal";
+}
+.info .line h6{
+    font-size: 20px;
+    margin-left: 8px;
+    font-family: "tajawal";
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #F0F6FC;
+    margin-top: 95px;
+}
+.roww{
+    width: 100%;
+    padding: 70px 85px;
+    display: flex;
+}
+
+.content h1{
+    font-size: 30px;
+    margin-top: 25px;
+    color: #3679DD;
+    font-weight: 500;
+    font-family: "tajawal";
+}
+.content p{
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 1.5;
+    color: #01296D;
+    font-family: "tajawal";
+}
+.image-section img{
+    margin-right: 35px;
+    padding-top: 80px;
+    height: 380px;
+    width: auto;
+}

@@ -1,0 +1,72 @@
+footer{
+    padding-top: 120px;
+}
+footer .footerlogo{
+    width: auto;
+    height: 85px;
+    margin: 15px 0px;
+    padding-left: 50px;
+}
+footer p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "tajawal";
+    padding-left: 50px;
+}
+footer .social{
+    
+    display: flex;
+    padding-left: 50px;
+}
+footer .social img{
+    color: black;
+    height: 35px;
+    width: auto;
+}
+footer .contact li p{
+
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "tajawal";
+   
+
+}
+footer h2{
+    font-size: 30px;
+    margin: 15px 0px;
+    color: #597dbd;
+    font-weight: bold;
+    font-family: "tajawal";
+    margin-left: 30px;
+}
+footer .conteneur{
+    display: flex;
+}
+footer .contact li{
+    display: flex;
+}
+footer .contact li .icon{
+    margin-top: 13px;
+ 
+    color: #24a197;
+}
+footer .rightbloc{
+    margin-left: 42%;
+    margin-top: 10px;
+}
+footer .footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0px;
+    border-top:1px solid #ccc ;
+}
+footer .footer-bottom span{
+    margin-top: 10px;
+    margin-left: 500px;
+    font-size: 17px;
+    font-family: "tajawal";
+
+}
+li{
+    list-style-type: none;
+}

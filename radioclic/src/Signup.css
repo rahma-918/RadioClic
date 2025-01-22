@@ -1,0 +1,82 @@
+.allcontainer{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    box-sizing: border-box;
+    font-family: "tajawal";
+  }
+  .cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-left: 5px;
+  }
+  
+  .cover {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .cover .coverimage {
+    width: auto;
+    height: 340px;
+    margin-bottom: 0px;
+    margin-right: -35px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+  }
+  
+ 
+  .formulaire-content {
+    flex: 1;
+    margin-left: 0px;
+    order: -1;
+  }
+  
+  .formulaire-content .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3E76CB;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 100px;
+  }
+  
+  .formulaire-content .boxes {
+    margin-top: 40px;
+    margin-left: 35px;
+  }
+  
+  
+  .formulaire-content .first-button{
+    padding-left: 75px;
+  }
+  .formulaire-content .first-button Button{
+    background-color: #3E76CB;
+    color: #fff;
+    font-family: "tajawal";
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .formulaire-content .first-button Button:hover{
+    background-color: #127BDC;
+  }
+
+  .formulaire-content .text a {
+    text-decoration: none;
+    color: #127BDC;
+  }
+  
+  .formualire-content .text a:hover {
+    text-decoration: underline;
+  }
